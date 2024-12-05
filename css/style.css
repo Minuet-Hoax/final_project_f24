@@ -6,17 +6,21 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: url('../images/redwall.jpg') no-repeat top center/cover;
     color: #ffffff;
     min-height: 100%;
+    background-color: #f6f6f6;
+}
+
+#homebody {
+    background: url('../images/redwall.jpg') no-repeat top center/cover;
 }
 
 a[href="#main"] {
     position: absolute;
     top: -100%;
     left: 0;
-    background-color: #00274C;
-    color: white;
+    background-color: #dcb58d;
+    color: black;
     padding: 1rem;
     text-align: center;
     text-decoration: none;
@@ -29,7 +33,7 @@ a[href="#main"]:focus {
 }
 
 header {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.63);
     padding: 1rem;
     position: fixed;
     width: 100%;
@@ -40,7 +44,17 @@ header ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 2.5rem;
+}
+
+header a:hover {
+    color: #dcb58d;
+}
+
+header a.active {
+    font-weight: bold;
+    color: #dcb58d;
+    border-bottom: 2px solid #dcb58d;
 }
 
 main {
@@ -53,35 +67,86 @@ header a {
     font-size: 1.2rem;
 }
 
-.overlay {
+.homeoverlay {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: rgba(30, 30, 30, 0.4);
-    padding: 2rem;
-    margin: 10% auto;
-    max-width: 80%;
+    background: rgba(30, 30, 30, 0.45);
+    padding: 2.5rem;
+    margin: auto;
+    margin-top: 12%;
+    margin-bottom: 3%;
+    max-width: 70%;
     border-radius: 8px;
 }
 
-.overlay h1 {
-    font-size: 3rem;
+.homeoverlay h1 {
+    font-size: 3.1rem;
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
-.overlay p {
-     font-size: 1.2rem;
+.homeoverlay p {
+     font-size: 1.3rem;
 }
 
-/* Responsive Styling */
+.card-section {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    margin-top: 4rem;
+    align-items: stretch;
+  }
+
+.card {
+    background: #f8f4f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 250px; /* Card width */
+    text-align: center;
+    overflow: hidden;
+}
+
+.card a {
+    text-decoration: none;
+    color: #333;
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Square cropping */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card h2 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.5rem;
+}
+
+.card p {
+    margin: 0 1rem 1.5rem;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Larger */
+    box-shadow: 0 8px 12px #00000074;
+    z-index: 10;
+}
+
+
 @media (max-width: 768px) {
-    .overlay h1 {
+    .homeoverlay h1 {
         font-size: 2.5rem;
     }
-    .overlay p {
+    .homeoverlay p {
         font-size: 1rem;
     }
 }
