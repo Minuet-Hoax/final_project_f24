@@ -23,6 +23,17 @@ body {
     background-blend-mode: overlay;
 }
 
+#tibetbody {
+    background: url('../images/lake1.jpg') no-repeat top center/cover;
+    background-color: #00000036;
+    background-blend-mode: overlay;
+}
+
+#otherbody {
+    background: url('../images/full_moon.jpg') no-repeat top center/cover;
+}
+
+
 a[href="#main"] {
     position: absolute;
     top: -100%;
