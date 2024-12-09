@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Margarine", sans-serif;
     color: #ffffff;
     min-height: 100%;
     background-color: #f6f6f6;
@@ -13,6 +13,14 @@ body {
 
 #homebody {
     background: url('../images/redwall.jpg') no-repeat top center/cover;
+    background-color: #00000036;
+    background-blend-mode: overlay;
+}
+
+#californiabody {
+    background: url('../images/joshua_tree.jpg') no-repeat top center/cover;
+    background-color: #00000036;
+    background-blend-mode: overlay;
 }
 
 a[href="#main"] {
@@ -73,7 +81,7 @@ header a {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: rgba(30, 30, 30, 0.45);
+    /* background: rgba(30, 30, 30, 0.45); */
     padding: 2.5rem;
     margin: auto;
     margin-top: 12%;
@@ -83,13 +91,33 @@ header a {
 }
 
 .homeoverlay h1 {
-    font-size: 3.1rem;
+    font-size: 6.5rem;
     font-weight: bold;
     margin-bottom: 2rem;
 }
 
 .homeoverlay p {
-     font-size: 1.3rem;
+    font-size: 1.6rem;
+}
+
+.californiaoverlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2.5rem;
+    margin: auto;
+    margin-top: 8%;
+    margin-bottom: 3%;
+    max-width: 70%;
+    border-radius: 8px;
+}
+
+.californiaoverlay h1 {
+    font-size: 6.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
 }
 
 .card-section {
@@ -99,7 +127,7 @@ header a {
     padding: 2rem;
     margin-top: 4rem;
     align-items: stretch;
-  }
+}
 
 .card {
     background: #f8f4f0;
@@ -127,12 +155,14 @@ header a {
 .card h2 {
     margin: 1rem 0 0.5rem;
     font-size: 1.5rem;
+    color: #222222;
 }
 
 .card p {
     margin: 0 1rem 1.5rem;
     font-size: 1rem;
     line-height: 1.4;
+    color: #222222;
 }
 
 .card:hover {
@@ -141,12 +171,201 @@ header a {
     z-index: 10;
 }
 
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    overflow: hidden;
+    max-width: 80%;
+    margin: auto;
+}
 
-@media (max-width: 768px) {
-    .homeoverlay h1 {
-        font-size: 2.5rem;
+.gallery_set {
+    min-height: 100vh;
     }
-    .homeoverlay p {
-        font-size: 1rem;
+
+.gallery_set {
+    flex: 0 0 100%;
+    justify-content: flex-end;
+    background: #c4a78c;
+    background: url('../images/joshua_tree.jpg') no-repeat top center/cover;
+    background-color: #00000021;
+    background-blend-mode: overlay;
+    border-right: 2px solid #333;
+    position: relative;
+}
+
+@media (min-width: 500px) {
+    .gallery_set {
+        flex: 0 0 50%;
     }
+}
+
+@media (min-width: 992px) {
+    .gallery {
+        height: 100vh;
+    }
+    .gallery_set_one {
+        animation: 60s move_one ease alternate infinite 5s;
+        transform: translateY(2%);
+    }
+    .gallery_set_three {
+        animation: 70s move_one ease alternate infinite 6s;
+        transform: translateY(2%);
+    }
+    .gallery_set_two {
+        animation: 58s move_two ease alternate infinite 5s;
+        transform: translateY(-50%);
+    }
+    .gallery_set_four {
+        animation: 65s move_two ease alternate infinite 5.5s;
+        transform: translateY(-50%);
+    }
+    .gallery_set:hover {
+        animation-play-state: paused;
+    }
+    .gallery_set {
+        flex: 0 0 25%;
+    }
+}
+
+.photo {
+    position: relative;
+    text-align: right;
+    padding-bottom: 3rem;
+}
+
+.photo_image img {
+    width: 90%;
+    transform: translateX(30%);
+    transition: 1s cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
+}
+
+.photo_name {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    margin-top: -9%;
+    transition: 0.4s ease-in-out 0.4s;
+    position: relative;
+    width: 100%;
+}
+
+.photo:hover .photo_image img {
+    transform: translateX(0%);
+}
+
+.photo:hover .photo_name {
+    color: #fff;
+}
+
+@keyframes move_one {
+    0%, 90%, 100% {
+        transform: translateY(2%);
+    }
+    45% {
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes move_two {
+    0%, 90%, 100% {
+        transform: translateY(-50%);
+    }
+    45% {
+        transform: translateY(5%);
+    }
+}
+
+@media (min-width: 992px) {
+    .card-section {
+        display: flex;
+        gap: 2rem;
+        padding-top: 2rem;
+        padding-bottom: 5rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        all: unset;
+        position: relative;
+        width: 300px;
+        height: 400px;
+        background: #f8f4f0;
+        transform-style: preserve-3d;
+        transform: perspective(2000px);
+        transition: 1s;
+        box-shadow: inset 100px 0 50px rgba(0, 0, 0, 0.5);
+        transform: scale(0.9);
+        margin-bottom: -3rem;
+    }
+
+    .card:hover {
+        z-index: 1111;
+        transform: perspective(2000px) rotate(-10deg);
+        box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.5);
+    }
+
+    .card .img-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        transform-origin: left;
+        z-index: 1;
+        transition: 1s;
+    }
+
+    .card .img-container img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .card:hover .img-container {
+        transform: rotateY(-135deg);
+    }
+
+    .card .card-details {
+        position: absolute;
+        left: 0;
+        top: 0;
+        box-sizing: border-box;
+        padding: 20px;
+        color: #000;
+    }
+
+    .card .card-details h2 {
+        margin: 0;
+        padding: 0.5em 0;
+        text-transform: uppercase;
+        font-size: 2em;
+        color: #000000d7;
+    }
+
+    .card .card-details p {
+        margin: 0;
+        padding: 0;
+        line-height: 25px;
+        font-size: 1.1em;
+    }
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.63);
+    padding: 1rem;
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }

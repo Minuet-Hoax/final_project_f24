@@ -6,8 +6,11 @@
     <title>Travel Gallery</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Margarine&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body id="californiabody">
     <a href="#main">Skip to Main Content</a>
     <header>
         <nav>
@@ -20,10 +23,98 @@
         </nav>
     </header>
     <main id="main">
-        <div class="homeoverlay">
-            <h1>Wandering Worlds</h1>
-            <p>Step into the echoes of my journeys, into the quiet tales of distant horizons.</p>
+        <div class="californiaoverlay">
+            <h1>California</h1>
+        </div>
+        <div class="gallery">
+            <div class="gallery_set">
+                <div class="gallery_set_one">
+                    <div class="photo">
+                        <div class="photo_image"><img src="./images/joshua_tree.jpg" alt="A joshua tree in the desert"></div>
+                        <div class="photo_name">Joshua Tree</div>
+                    </div>
+                    <div class="photo">
+                        <div class="photo_image"><img src="./images/pier.jpg" alt="the sunrise over a pier at Santa Barbara"></div>
+                        <div class="photo_name">Santa Barbara</div>
+                    </div>
+                    <div class="photo">
+                        <div class="photo_image"><img src="./images/beach_sunset.jpg" alt="the sunset over a beach in San Francisco and a family is walking on the beach"></div>
+                        <div class="photo_name">San Francisco</div>
+                    </div>
+                    <div class="photo">
+                        <div class="photo_image"><img src="./images/beach_sunset2.jpg" alt="the sunset over a beach in San Francisco and a mother is taking care of her child"></div>
+                        <div class="photo_name">San Francisco</div>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery_set">
+                <div class="gallery_set_two">
+                    <div class="photo">
+                        <div class="photo_image"><img src="./images/card_california.jpg" alt="A couple stands beside the railing at sunset"></div>
+                        <div class="photo_name">Los Angeles</div>
+                    </div>
+                    <div class="photo">
+                        <div class="photo_image"><img src="./images/small_town.jpg" alt="The view of a small town near Los Angeles"></div>
+                        <div class="photo_name">Los Angeles</div>
+                    </div>
+                    <div class="photo">
+                        <div class="photo_image"><img src="./images/beach.jpg" alt="The view of the beach at a small town near Los Angeles"></div>
+                        <div class="photo_name">Los Angeles</div>
+                    </div>
+                    <div class="photo">
+                        <div class="photo_image"><img src="./images/small_town2.jpg" alt="The vertical view of a small town near Los Angeles"></div>
+                        <div class="photo_name">Los Angeles</div>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery_set">
+                <div class="gallery_set_three">
+                    <div class="photo">
+                        <div class="photo_image"><img src="./images/highway_sunset.jpg" alt="The sunset by the highway"></div>
+                        <div class="photo_name">Walnut Creek</div>
+                    </div>
+                    <div class="photo">
+                        <div class="photo_image"><img src="./images/mist.jpg" alt="The morning mist in Santa Barbara"></div>
+                        <div class="photo_name">Santa Barbara</div>
+                    </div>
+                    <div class="photo">
+                        <div class="photo_image"><img src="./images/pier_moon.jpg" alt="the full moon over a pier"></div>
+                        <div class="photo_name">Santa Barbara</div>
+                    </div>
+                    <div class="photo">
+                        <div class="photo_image"><img src="./images/st_monica.jpg" alt="The view of the pier at Santa Monica"></div>
+                        <div class="photo_name">Santa Monica</div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="gallery_set">
+                <div class="gallery_set_four">
+                    <div class="photo">
+                        <div class="photo_image"><img src="./images/stars1.jpg" alt="The star sky with rocky mountains"></div>
+                        <div class="photo_name">Joshua Tree</div>
+                    </div>
+                    <div class="photo">
+                        <div class="photo_image"><img src="./images/wave.jpg" alt="The wave, beach, and sunset"></div>
+                        <div class="photo_name">San Francisco</div>
+                    </div>
+                    <div class="photo">
+                        <div class="photo_image"><img src="./images/roof_moon.jpg" alt="The half moon lay on a roof top"></div>
+                        <div class="photo_name">Hayward</div>
+                    </div>
+                    <div class="photo">
+                        <div class="photo_image"><img src="./images/skull_rock.jpg" alt="The night view of the skull rock in Joshua Tree National Park"></div>
+                        <div class="photo_name">Joshua Tree</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
+    <footer>
+        <p>All rights reserved to Alice Zhang | © <span id="year"></span></p>
+        <script>
+            document.getElementById("year").innerHTML = new Date().getFullYear();
+        </script>
+    </footer>
 </body>
 </html>

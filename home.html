@@ -6,6 +6,9 @@
     <title>Travel Gallery</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Margarine&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body id="homebody">
     <a href="#main">Skip to Main Content</a>
@@ -29,27 +32,45 @@
         <section class="card-section">
             <div class="card">
                 <a href="california.html">
-                    <img src="./images/card_california.jpg" alt="A couple stands beside the railing at sunset">
-                    <h2>California</h2>
-                    <p>Golden beaches, iconic cities, and endless sunshine.</p>
+                    <div class="img-container">
+                        <img src="./images/card_california.jpg" alt="A couple stands beside the railing at sunset">
+                    </div>
+                    <div class="card-details">
+                        <h2>California</h2>
+                        <p>Golden beaches, iconic cities, and endless sunshine.</p>
+                    </div>
                 </a>
             </div>
             <div class="card">
                 <a href="western-sichuan-tibet.html">
-                    <img src="./images/card_chuanxi.jpg" alt="The monastery at Larung Gar Buddhist Academy">
-                    <h2>Western Sichuan & Tibet</h2>
-                    <p>Majestic mountains and serene monasteries.</p>
+                    <div class="img-container">
+                        <img src="./images/card_chuanxi.jpg" alt="The monastery at Larung Gar Buddhist Academy">
+                    </div>
+                    <div class="card-details">
+                        <h2>Western Sichuan & Tibet</h2>
+                        <p>Majestic mountains and serene monasteries.</p>
+                    </div>
                 </a>
             </div>
             <div class="card">
                 <a href="other-places.html">
-                    <img src="./images/card_other.jpg" alt="the night view of Orlando Disney World">
-                    <h2>Other Places</h2>
-                    <p>A world of discorvery in the little-known corners.</p>
+                    <div class="img-container">
+                        <img src="./images/card_other.jpg" alt="The night view of Orlando Disney World">
+                    </div>
+                    <div class="card-details">
+                        <h2>Other Places</h2>
+                        <p>A world of discovery in the little-known corners.</p>
+                    </div>
                 </a>
             </div>
         </section>
 
     </main>
+    <footer>
+        <p>All rights reserved to Alice Zhang | © <span id="year"></span></p>
+        <script>
+            document.getElementById("year").innerHTML = new Date().getFullYear();
+        </script>
+    </footer>
 </body>
 </html>
